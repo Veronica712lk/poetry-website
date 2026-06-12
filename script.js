@@ -156,20 +156,13 @@ function triggerPulseEffect() {
 
 const poem = `
 I remember how you moved through life,
-soft as rain that ends a night,
-a quiet peace after noise and strain,
-like the world felt gentle again.
+soft as rain that ends a night.
 
-You were color in empty space,
-poetry in an everyday place,
-a presence rare in a crowded room,
-like spring that arrives too soon.
+A colour in empty space,
+poetry in an everyday place. 
 
-I still remember the way you’d speak,
-turning simple days into something deep,
-your thoughts would wander, far and wide,
-then come back dancing side by side.
-
+I miss how you turned simple days into something deep,
+your thoughts would wander, far and wide.
 One moment serious, grounded and true,
 next moment laughing out of the blue,
 and somehow every word you said
@@ -178,23 +171,21 @@ felt like it stayed inside my head.
 Your drawings spoke without a sound,
 like quiet worlds you’d just found,
 each line so sure, each shade so true,
-like they were made to remember you.
+like they were made to embody you.
 
 And I admired it all in quiet ways.
-I don’t let people in that fast,
-I keep my distance, make it last.
 
-And still beneath each mistake I made,
+But beneath each mistake I made,
 each moment that I wish would fade,
-I’m still the one who smiled at you,
-who read your words and felt them too.
+I’m still the one who smiled at your texts,
+who listened to your random thoughts.
   
 It's still me.
   
-I just wrote this to keep my word,
-to say what maybe you never heard:
+I  wrote this to keep my word,
+to say what maybe I never did:
 you were amazing through and through,
-and I’m still glad I met you.
+and I’m glad I got to know the prettiest girl ever!
 `;
 
 function startPoem() {
@@ -246,7 +237,7 @@ function spawnLeaf() {
     const leaf = document.createElement("div");
 
     leaf.className = "leaf";
-    leaf.innerHTML = "🍃";
+    leaf.innerHTML = "🍀";
 
     leaf.style.left = Math.random() * window.innerWidth + "px";
     leaf.style.animationDuration = 6 + Math.random() * 5 + "s";
