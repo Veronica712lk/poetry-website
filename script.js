@@ -161,7 +161,7 @@ soft as rain that ends a night.
 A colour in empty space,
 poetry in an everyday place. 
 
-I miss how you turned simple days into something deep,
+How you turned simple days into something deep,
 your thoughts would wander, far and wide.
 One moment serious, grounded and true,
 next moment laughing out of the blue,
@@ -180,12 +180,10 @@ each moment that I wish would fade,
 I’m still the one who smiled at your texts,
 who listened to your random thoughts.
   
-It's still me.
-  
 I  wrote this to keep my word,
 to say what maybe I never did:
 you were amazing through and through,
-and I’m glad I got to know the prettiest girl ever!
+and I’m glad I got to have known you.
 `;
 
 function startPoem() {
