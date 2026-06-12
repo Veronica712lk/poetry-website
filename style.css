@@ -1,0 +1,1013 @@
+/* ===================================== */
+/* 🌿 BASE */
+/* ===================================== */
+:root {
+  /* 🌿 Primary (her favorite color) */
+  --green-main: #5bbf7a;
+  --green-soft: #a8e6b7;
+  --green-deep: #2f6b4f;
+
+  /* 🌸 Romantic accent */
+  --pink-glow: #ffb6c1;
+  --rose-soft: #ffd6e0;
+
+  /* 🌙 Cinematic depth */
+  --night-blue: #1b2a3a;
+  --mist-blue: #6fa3c8;
+
+  /* ✨ Light / magic */
+  --gold-glow: #ffd37a;
+  --warm-white: #fffaf3;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  body {
+  background: radial-gradient(circle at top,
+      var(--green-soft),
+      #fdfaf5 40%,
+      #e8f0ff 75%,
+      var(--night-blue) 130%);
+  color: var(--green-deep);
+}
+  color: #2F6B4F;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.glow-pink {
+  color: var(--rose-soft);
+  text-shadow: 0 0 20px var(--pink-glow);
+}
+
+.glow-green {
+  color: var(--green-soft);
+  text-shadow: 0 0 20px var(--green-main);
+}
+
+.glow-gold {
+  color: var(--warm-white);
+  text-shadow: 0 0 25px var(--gold-glow);
+}
+
+/* ===================================== */
+/* 🌿 PAGE SYSTEM */
+/* ===================================== */
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 20px;
+}
+#page3 {
+  align-items: flex-start;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* ===================================== */
+/* 🌿 CONTAINER */
+/* ===================================== */
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===================================== */
+/* 🌿 WELCOME TEXT */
+/* ===================================== */
+
+.big-welcome {
+  font-size: 72px;
+  letter-spacing: 10px;
+
+  background: linear-gradient(
+    90deg,
+    var(--green-soft),
+    var(--rose-soft),
+    var(--green-main)
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: breatheGlow 3.5s ease-in-out infinite;
+}
+
+@keyframes breatheGlow {
+  0%, 100% {
+    transform: scale(1);
+    text-shadow: 0 0 15px rgba(120, 200, 140, 0.3);
+  }
+  50% {
+    transform: scale(1.06);
+    text-shadow: 0 0 40px rgba(120, 200, 140, 0.7);
+  }
+}
+
+/* ===================================== */
+/* 🌸 KAWAII */
+/* ===================================== */
+
+.kawaii {
+  font-size: 50px;
+}
+
+.floating-kawaii {
+  transition: transform 0.2s ease;
+}
+
+@keyframes floatKawaii {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-14px); }
+}
+
+/* ===================================== */
+/* 🌿 BUTTON */
+/* ===================================== */
+
+.glow-btn {
+  background: rgba(120, 200, 140, 0.8);
+  border: none;
+  padding: 16px 32px;
+  border-radius: 999px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 25px rgba(120, 200, 140, 0.3);
+  position: relative;
+}
+
+.glow-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 45px rgba(120, 200, 140, 0.7);
+}
+
+/* ===================================== */
+/* 🌿 CURSOR GLOW */
+/* ===================================== */
+
+.cursor-glow {
+  position: fixed;
+  width: 26px;
+  height: 26px;
+  background: rgba(129, 199, 132, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  filter: blur(12px);
+  z-index: 9999;
+}
+
+/* ===================================== */
+/* 🌿 NATURE PARTICLES (IMPROVED VISIBILITY) */
+/* ===================================== */
+
+.particle {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+
+  background: radial-gradient(
+    circle,
+    rgba(165, 214, 167, 0.95),
+    rgba(129, 199, 132, 0.4),
+    transparent
+  );
+
+  opacity: 0.9;
+  animation: floatUpWind 7s linear forwards;
+}
+
+@keyframes floatUpWind {
+  0% {
+    transform: translateY(110vh) translateX(0px) scale(0.8);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(50vh) translateX(45px) scale(1.1);
+  }
+
+  100% {
+    transform: translateY(-10vh) translateX(-35px) scale(0.6);
+    opacity: 0;
+  }
+}
+
+/* ===================================== */
+/* 🌿 POEM */
+/* ===================================== */
+
+#poemText {
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+
+  background: rgba(168, 213, 186, 0.15);
+  padding: 25px;
+  border-radius: 20px;
+
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  /* IMPORTANT FIX */
+  min-height: auto;
+  height: auto;
+  display: block;
+}
+
+/* ===================================== */
+/* 🍃 LEAVES */
+/* ===================================== */
+
+.leaf {
+  position: fixed;
+  top: -50px;
+  font-size: 22px;
+  opacity: 0.7;
+  animation: leafFall 7s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes leafFall {
+  0% { transform: translateY(-10vh); }
+  100% { transform: translateY(110vh); }
+}
+/* ===================================== */
+/* 💌 PREMIUM ENVELOPE UPGRADE */
+/* ===================================== */
+
+.envelope {
+  width: 340px;
+  height: 240px;
+  margin: auto;
+  perspective: 1400px;
+  cursor: pointer;
+
+  /* soft floating life */
+  animation: envelopeFloat 4s ease-in-out infinite;
+  transition: transform 0.4s ease;
+  background: linear-gradient(
+    145deg,
+    #fffaf6,
+    #eafff1,
+    #f6f0ff
+  );
+}
+}
+
+/* float motion */
+@keyframes envelopeFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+/* hover = feels interactive */
+.envelope:hover {
+  transform: scale(1.03);
+  filter: drop-shadow(0 0 25px rgba(129, 199, 132, 0.45));
+}
+
+/* inner animation */
+.envelope-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* open animation */
+.envelope.open .envelope-inner {
+  transform: rotateY(180deg) scale(1.06);
+}
+
+/* front */
+.envelope-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #dff5e1, #f5fff6);
+  border-radius: 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 42px;
+
+  backface-visibility: hidden;
+
+  box-shadow:
+    0 25px 70px rgba(0,0,0,0.12),
+    inset 0 0 30px rgba(168, 213, 186, 0.25);
+}
+
+/* tiny seal vibe (fake detail = makes it feel real) */
+.envelope-front::after {
+  content: "✦";
+  position: absolute;
+  bottom: 18px;
+  font-size: 14px;
+  opacity: 0.4;
+}
+
+/* ===================================== */
+/* 📜 BACK (PAPER STAGE) */
+/* ===================================== */
+
+.envelope-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+/* container for unfolding */
+.paper-stage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 14px;
+}
+
+/* ===================================== */
+/* 📜 PAPER LAYERS (UNFOLD EFFECT) */
+/* ===================================== */
+
+.paper-layer {
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.92);
+
+  box-shadow: inset 0 0 25px rgba(168, 213, 186, 0.2);
+
+  transform-origin: center;
+  opacity: 0;
+}
+
+/* first fold */
+.layer1 {
+  transform: scaleY(0.2);
+  animation: unfold1 0.8s ease forwards;
+}
+
+/* second fold */
+.layer2 {
+  transform: scaleY(0.4);
+  animation: unfold2 1s ease forwards;
+}
+
+/* content sits above layers */
+.paper-content {
+  position: relative;
+  z-index: 3;
+
+  padding: 25px;
+
+  background: rgba(255,255,255,0.85);
+  border-radius: 14px;
+
+  backdrop-filter: blur(10px);
+
+  animation: fadeInPaper 1.2s ease forwards;
+}
+
+/* ===================================== */
+/* ✨ UNFOLD ANIMATIONS */
+/* ===================================== */
+
+@keyframes unfold1 {
+  0% {
+    transform: scaleY(0.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes unfold2 {
+  0% {
+    transform: scaleY(0.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 0.6;
+  }
+}
+
+@keyframes fadeInPaper {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ===================================== */
+/* 💌 ENVELOPE REDESIGN */
+/* ===================================== */
+
+.poem-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.envelope {
+  position: relative;
+  width: 420px;
+  height: 280px;
+  cursor: pointer;
+  animation: envelopeFloat 5s ease-in-out infinite;
+}
+
+@keyframes envelopeFloat {
+  0%,100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+/* ===================================== */
+/* 🎀 PREMIUM RIBBON (UPGRADED) */
+/* ===================================== */
+
+.bow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-1deg);
+  width: 78px;
+  height: 48px;
+  z-index: 50;
+
+  animation: bowFloat 4s ease-in-out infinite;
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.25));
+}
+
+/* soft luxury satin gradient */
+.loop {
+  position: absolute;
+  width: 30px;
+  height: 20px;
+ background: linear-gradient(135deg, #a46a73, #6e3b44);
+  border-radius: 50%;
+
+  top: 12px;
+
+  box-shadow:
+    inset 0 2px 6px rgba(255,255,255,0.25),
+    0 6px 10px rgba(0,0,0,0.2);
+}
+
+.left {
+  left: 0;
+  transform: rotate(-18deg);
+}
+
+.right {
+  right: 0;
+  transform: rotate(18deg);
+}
+
+/* knot (more dimensional) */
+.knot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  width: 18px;
+  height: 18px;
+
+   background: radial-gradient(circle, #e2b2bb, #7a3f49);
+
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+
+  box-shadow:
+    inset 0 2px 3px rgba(255,255,255,0.3),
+    0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* ribbon tails */
+.bow::before,
+.bow::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 34px;
+
+  background: linear-gradient(180deg, #a46a73, #5e2f37);
+
+  top: 22px;
+  border-radius: 5px;
+
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+.bow::before {
+  left: 26px;
+  transform: rotate(14deg);
+}
+
+.bow::after {
+  right: 26px;
+  transform: rotate(-14deg);
+}
+
+/* subtle breathing movement */
+@keyframes bowFloat {
+  0%, 100% {
+    transform: translate(-50%, -50%) rotate(-1deg);
+  }
+  50% {
+    transform: translate(-50%, -52%) rotate(2deg);
+  }
+}
+
+
+
+
+@keyframes bowBounce {
+  0%,100% {
+    transform: translateX(-50%) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateX(-50%) rotate(2deg);
+  }
+}
+
+/* ===================================== */
+/* 💌 BODY */
+/* ===================================== */
+
+/* ===================================== */
+/* 💌 PREMIUM ENVELOPE MATERIAL */
+/* ===================================== */
+
+.envelope-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+
+  /* NEW: warm ivory + subtle rose tint */
+  background: linear-gradient(
+    145deg,
+    #fffaf6,
+    #f3efe8,
+    #f7f1ea
+  );
+
+  /* stronger depth */
+  box-shadow:
+    0 35px 70px rgba(0,0,0,0.18),
+    inset 0 1px 0 rgba(255,255,255,0.9),
+    inset 0 -10px 25px rgba(0,0,0,0.05);
+
+  overflow: visible;
+
+  /* subtle texture */
+  border: 1px solid rgba(160, 120, 90, 0.25);
+}
+
+/* soft outer glow (feels like “important object”) */
+.envelope::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 26px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 220, 200, 0.25),
+    transparent 70%
+  );
+  z-index: -1;
+}
+
+/* front becomes more “paper card” */
+.envelope-front {
+  background: linear-gradient(
+    135deg,
+    #fffdf9,
+    #f6efe6
+  );
+
+  border-radius: 22px;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255,255,255,0.8),
+    inset 0 -10px 20px rgba(0,0,0,0.05);
+}
+/* ===================================== */
+/* 📩 FLAP */
+/* ===================================== */
+
+.envelope-flap {
+  position: absolute;
+
+  width: 100%;
+  height: 150px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #e5f5e7,
+    #ffffff
+  );
+
+  clip-path:
+    polygon(
+      0 0,
+      100% 0,
+      50% 100%
+    );
+
+  transform-origin: top center;
+
+  z-index: 12;
+
+  transition: 1s ease;
+}
+
+/* ===================================== */
+/* 🌿 FRONT */
+/* ===================================== */
+
+.envelope-front {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  z-index: 10;
+
+  text-align: center;
+  transition:opacity .6s ease; 
+}
+
+.envelope-front h2 {
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.envelope-front p {
+  opacity: 0.7;
+}
+
+/* ===================================== */
+/* ✨ SEAL */
+/* ===================================== */
+
+.seal {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+  radial-gradient(
+    circle,
+    #ffffff,
+    #dff5e1
+  );
+
+  margin-bottom: 15px;
+
+  box-shadow:
+    0 0 25px rgba(165,214,167,0.7);
+
+  animation: sealGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes sealGlow {
+
+  0%,100% {
+    box-shadow:
+      0 0 15px rgba(165,214,167,0.5);
+  }
+
+  50% {
+    box-shadow:
+      0 0 40px rgba(165,214,167,1);
+  }
+}
+
+/* ===================================== */
+/* 📜 LETTER */
+/* ===================================== */
+
+.letter{
+  position:absolute;
+
+  left:50%;
+  top:-20px;
+
+  width:88%;
+
+  opacity:0;
+
+  transform:
+    translateX(-50%)
+    translateY(-100px)
+    scale(0.9);
+
+  z-index:15;
+
+  transition:all 1.4s ease;
+}
+
+
+/* ===================================== */
+/* 📜 PAPER */
+/* ===================================== */
+
+.paper-content{
+  background:rgba(255,255,255,0.97);
+
+  border-radius:18px;
+
+  padding:35px;
+
+  min-height:500px;
+
+  backdrop-filter:blur(10px);
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.08);
+
+  border:1px solid rgba(168,213,186,0.35);
+}
+
+
+
+.paper-content h1 {
+  margin-bottom: 20px;
+}
+
+/* ===================================== */
+/* 💌 OPEN STATE */
+/* ===================================== */
+
+
+.envelope-flap{
+  transform-origin:top center;
+  backface-visibility:hidden;
+}
+
+.envelope.open .envelope-flap{
+  transform:rotateX(-180deg);
+}
+
+.envelope.open .envelope-front{
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .6s ease;
+}
+
+.envelope.open .bow{
+  opacity:0;
+  transform:translateX(-50%) scale(.5);
+  transition:all .6s ease;
+}
+
+.envelope.open .letter{
+  opacity:1;
+
+  transform:
+    translateX(-50%)
+    translateY(220px)
+    scale(1);
+}
+```
+
+.envelope-body {
+  overflow: visible;
+}
+
+/* ===================================== */
+/* 🌿 POEM */
+/* ===================================== */
+
+#poemText {
+  max-width: 100%;
+  line-height: 2;
+  white-space: pre-wrap;
+  text-align: left;
+  font-size: 18px;
+}
+
+/* ===================================== */
+/* 📱 MOBILE */
+/* ===================================== */
+
+@media (max-width: 600px) {
+
+  .envelope {
+    width: 92%;
+    max-width: 380px;
+  }
+
+  .envelope-front h2 {
+    font-size: 28px;
+  }
+
+  .paper-content {
+    padding: 25px;
+  }
+}
+/* ===================================== */
+/* 🎬 CINEMATIC ENVELOPE MODE */
+/* ===================================== */
+
+/* idle breathing (makes it feel “alive”) */
+.envelope {
+  position: relative;
+  animation: envelopeBreath 4.5s ease-in-out infinite;
+}
+
+@keyframes envelopeBreath {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-6px) scale(1.01);
+  }
+}
+
+/* cinematic pre-open tension */
+.envelope.pre-open {
+  animation: envelopeShake 0.6s ease-in-out 1;
+}
+
+@keyframes envelopeShake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-3px) rotate(-0.3deg); }
+  40% { transform: translateX(3px) rotate(0.3deg); }
+  60% { transform: translateX(-2px); }
+  80% { transform: translateX(2px); }
+  100% { transform: translateX(0); }
+}
+
+/* internal pressure glow (IMPORTANT cinematic cue) */
+.envelope::after {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border-radius: 18px;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 240, 230, 0.9),
+    rgba(255, 200, 180, 0.25),
+    transparent 70%
+  );
+
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  filter: blur(2px);
+}
+
+.envelope.pre-open::after {
+  opacity: 1;
+  animation: innerPulse 1s ease-in-out infinite;
+}
+
+@keyframes innerPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(1.03);
+    opacity: 0.75;
+  }
+}
+
+/* PAPER RISE (this is the “reveal magic”) */
+.letter {
+  transition: all 1.4s cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+
+.envelope.open .letter {
+  opacity: 1;
+  transform:
+    translateX(-50%)
+    translateY(-170px)
+    scale(1);
+}
+
+/* subtle background “reality shift” */
+#page3 {
+  transition: filter 1s ease, transform 1s ease;
+}
+
+.envelope.open ~ * {
+  filter: blur(0px);
+}
+.light-core {
+  position: absolute;
+  inset: 30px;
+  border-radius: 18px;
+  background: radial-gradient(
+    circle,
+    rgba(255,255,255,0.7),
+    rgba(255,220,200,0.15),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.envelope.pre-open .light-core {
+  opacity: 1;
+  animation: innerPulse 1s ease-in-out infinite;
+
+/* ===================================== */
+/* 💌 PRE-OPEN ENERGY (SHAKE + PULSE) */
+/* ===================================== */
+
+.envelope.pre-open {
+  animation: envelopeShake 0.6s ease-in-out 1;
+}
+
+@keyframes envelopeShake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-2px) rotate(-0.3deg); }
+  50% { transform: translateX(3px) rotate(0.3deg); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+}
+
+/* inner “pressure light” */
+.envelope::after {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  border-radius: 18px;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 200, 180, 0.15),
+    transparent 70%
+  );
+
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+/* glow becomes visible just before opening */
+.envelope.pre-open::after {
+  opacity: 1;
+  animation: innerPulse 1s ease-in-out infinite;
+}
+
+@keyframes innerPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.03);
+    opacity: 0.8;
+  }
+}

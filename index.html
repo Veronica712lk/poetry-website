@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>POEM🌿🐚</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- 🌿 MUSIC -->
+  <audio id="bgMusic" loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- 🌿 CURSOR GLOW -->
+  <div class="cursor-glow"></div>
+
+  <!-- 🌿 NATURE FIELD -->
+  <div id="nature-field"></div>
+
+  <!-- 🌿 PAGE 2 (WELCOME) -->
+  <section class="page active" id="page2">
+
+    <div class="container welcome-container" id="welcome">
+
+      <h1 class="welcome-text big-welcome">Hey heyyy</h1>
+
+      <div class="divider"></div>
+
+      <div class="kawaii floating-kawaii" id="kawaii">
+        (✿◕‿◕✿)<br><br>
+      </div>
+
+      <button class="glow-btn ripple-btn" onclick="startSite()">
+        Continue ♡
+      </button>
+
+    </div>
+
+  </section>
+<section class="page" id="page3">
+
+  <div class="container poem-container">
+
+    <div id="envelope" class="envelope" onclick="openLetter()">
+
+      <!-- 🎀 CENTERED BOW -->
+      <div class="bow">
+
+        <div class="loop left"></div>
+
+        <div class="knot"></div>
+
+        <div class="loop right"></div>
+
+      </div>
+
+      <!-- 💌 ENVELOPE BODY -->
+     
+<div class="envelope-body">
+  <div class="light-core"></div>
+        <!-- FLAP -->
+        <div class="envelope-flap"></div>
+
+        <!-- FRONT OF ENVELOPE -->
+        <div class="envelope-front">
+
+          <div class="seal">✦</div>
+
+        </div>
+
+        <!-- LETTER -->
+        <div class="letter">
+
+          <div class="paper-content">
+
+            
+
+            <p id="poemText"></p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
