@@ -829,10 +829,14 @@ body {
 
 #poemText {
   max-width: 100%;
-  line-height: 2;
   white-space: pre-wrap;
   text-align: left;
-  font-size: 18px;
+
+  font-family: 'Dancing Script', cursive !important;
+
+  font-size: 25px;
+  line-height: 1.8;
+  color: black;
 }
 
 /* ===================================== */
