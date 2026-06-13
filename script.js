@@ -155,35 +155,44 @@ function triggerPulseEffect() {
 // =====================================
 
 const poem = `
-I remember how you moved through life,
-soft as rain that ends a night.
+She is colour in empty space,
+poetry hidden in an ordinary place.
+The kind of person who makes the world feel brighter
+without ever trying to be.
 
-A colour in empty space,
-poetry in an everyday place. 
+She has a gentle heart,
+a sensitive soul that notices the things
+most people pass by without seeing.
+Her mind is a universe of endless dimensions,
+complex, thoughtful and beautiful in ways
+that can't be captured all at once.
 
-How you turned simple days into something deep,
-your thoughts would wander, far and wide.
-One moment serious, grounded and true,
-next moment laughing out of the blue,
-and somehow every word you said
-felt like it stayed inside my head.
+She's talented in more ways than she knows.
+And her drawings are like windows into her inner world,
+portals revealing pieces of her depth.
 
-Your drawings spoke without a sound,
-like quiet worlds you’d just found,
-each line so sure, each shade so true,
-like they were made to embody you.
+She has the most interesting personality,
+the kind that makes every conversation memorable,
+and interests that make her impossible to forget.
+And somehow, among all those remarkable things,
+she still has the cutest dimple I've ever seen,
+a small detail that somehow makes her smile
+even more impossible to ignore.
 
-And I admired it all in quiet ways.
+She taught me so much about myself
+without ever meaning to.
+She helped me see things I never noticed,
+ask questions I never thought to ask,
+and become someone a little more honest,
+a little more aware.
 
-But beneath each mistake I made,
-each moment that I wish would fade,
-I’m still the one who smiled at your texts,
-who listened to your random thoughts.
-  
-I  wrote this to keep my word,
-to say what maybe I never did:
-you were amazing through and through,
-and I’m glad I got to have known you.
+She brightens the world simply by existing.
+Not because she tries to,
+but because that's who she is.
+
+And if beauty is measured by kindness, depth, creativity
+and the way someone leaves the world better than they found it,
+then she is the most beautiful girl inside and out.
 `;
 
 function startPoem() {
